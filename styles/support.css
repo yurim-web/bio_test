@@ -1,0 +1,186 @@
+/* 기본 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pretendard', sans-serif;
+    line-height: 1.5;
+    color: #3C3C3C;
+}
+
+/* 헤더 섹션 */
+.header-section {
+    position: relative;
+    height: 400px;
+    background-image: url('../images/support-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 72px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.header-content p {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* 메인 콘텐츠 */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 64px 16px;
+}
+
+/* 카드 컨테이너 */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    margin-bottom: 64px;
+}
+
+/* 카드 스타일 */
+.card {
+    background: white;
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+/* 버튼 그룹 */
+.button-group {
+    display: flex;
+    gap: 16px;
+}
+
+/* 스토어 버튼 */
+.store-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #3C3C3C;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.store-button:hover {
+    background-color: #2a2a2a;
+}
+
+.store-button img {
+    width: 24px;
+    height: 24px;
+}
+
+/* 다운로드 링크 */
+.download-link,
+.video-link,
+.support-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #3C3C3C;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.download-link:hover,
+.video-link:hover,
+.support-link:hover {
+    color: #2a2a2a;
+}
+
+.download-link img,
+.video-link img,
+.support-link img {
+    width: 24px;
+    height: 24px;
+}
+
+/* 고객 지원 섹션 */
+.support-section {
+    margin-top: 64px;
+}
+
+.support-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+
+.support-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.support-card {
+    background: white;
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.support-card h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 48px;
+    }
+
+    .header-content p {
+        font-size: 20px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .support-container {
+        grid-template-columns: 1fr;
+    }
+} 
